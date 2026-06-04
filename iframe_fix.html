@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Loader with Fullscreen</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-color: #330000;
+            color: #ffdddd;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #iframeContainer {
+            flex-grow: 1;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #loadedIframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Fullscreen styles removed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="iframeContainer">
+            <iframe id="loadedIframe" src="https://example.vercel.app/" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        const loadedIframe = document.getElementById('loadedIframe');
+        const iframeContainer = document.getElementById('iframeContainer');
+    </script>
+</body>
+</html>
